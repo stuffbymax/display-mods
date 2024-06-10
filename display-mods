@@ -1,0 +1,30 @@
+# Remove existing mode (if any)
+xrandr --delmode eDP-1 "1920x1080_120.00"
+xrandr --rmmode "1920x1080_120.00"
+
+# Add new mode for 60Hz
+xrandr --newmode "1920x1080_60.00"  148.50  1920 2008 2052 2200  1080 1084 1089 1125 -hsync +vsync
+xrandr --addmode eDP-1 "1920x1080_60.00"
+
+# Add new mode for 75Hz
+xrandr --newmode "1920x1080_75.00"  220.75  1920 2056 2264 2608  1080 1083 1088 1120 -hsync +vsync
+xrandr --addmode eDP-1 "1920x1080_75.00"
+
+# Add new mode for 90Hz
+xrandr --newmode "1920x1080_90.00"  277.00  1920 2048 2248 2576  1080 1083 1088 1158 -hsync +vsync
+xrandr --addmode eDP-1 "1920x1080_90.00"
+
+# Add new mode for 100Hz
+xrandr --newmode "1920x1080_100.00"  285.50  1920 2040 2240 2560  1080 1083 1088 1120 -hsync +vsync
+xrandr --addmode eDP-1 "1920x1080_100.00"
+
+# Add new mode for 120Hz
+xrandr --newmode "1920x1080_120.00"  369.50  1920 2080 2288 2656  1080 1083 1088 1160 -hsync +vsync
+xrandr --addmode eDP-1 "1920x1080_120.00"
+
+# Set the desired mode
+xrandr --output eDP-1 --mode "1920x1080_60.00"
+xrandr --output eDP-1 --mode "1920x1080_75.00"
+xrandr --output eDP-1 --mode "1920x1080_90.00"
+xrandr --output eDP-1 --mode "1920x1080_100.00"
+xrandr --output eDP-1 --mode "1920x1080_120.00"
